@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  nombre: string='Batman';
+  array =[1,2,4,4,5,6,7,8,9,10];
+  PI:number=Math.PI;
 }
