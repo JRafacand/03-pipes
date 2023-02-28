@@ -48,11 +48,81 @@
             <th> number </th>
             <th>{{PI|number:'.0-4'}}</th>
           </tr>
+          <tr>
+            <th>{{porcentaje}}</th>
+            <th> percent </th>
+            <th>{{porcentaje|percent}}</th>
+          </tr>
+          <tr>
+            <th>{{porcentaje}}</th>
+            <th> percent:'2.2-2'</th>
+            <th>{{porcentaje|percent:'2.2-2'}}</th>
+          </tr>
+          <tr>
+            <th>{{salario}}</th>
+            <th> currency </th>
+            <th>{{salario|currency}}</th>
+          </tr>
+          <tr>
+            <th>{{salario}}</th>
+            <th> currency EUR</th>
+            <th>{{salario|currency:'EUR'}}</th>
+          </tr>
+          <tr>
+            <th>{{salario}}</th>
+            <th> currency:'CAD':'symbol-narrow':'.0-0'</th>
+            <th>{{salario|currency:'CAD':'symbol-narrow':'.0-0'}}</th>
+          </tr>
+          <tr>
+            <th>{{valorpro}}</th>
+            <th> async</th>
+            <th>{{valorpro | async}}</th>
+          </tr>
+          <tr>
+            <th>{{fecha}}</th>
+            <th> Date</th>
+            <th>{{fecha | date}}</th>
+          </tr>
+          <tr>
+            <th>{{fecha}}</th>
+            <th> Date 'medium'</th>
+            <th>{{fecha | date:'medium'}}</th>
+          </tr>
+          <tr>
+            <th>{{fecha}}</th>
+            <th> Date 'medium'</th>
+            <th>{{fecha | date:'medium'}}</th>
+          </tr>
+          <tr>
+            <th>{{fecha}}</th>
+            <th> Date 'short'</th>
+            <th>{{fecha | date:'short'}}</th>
+          </tr>
+          <tr>
+            <td>{{idioma}}</td>
+            <td> Date 'MMMM-dd'
+              <br>
+              <button class="btn btn-primary m-1"(click)="idioma='ES'">ESPAÑOL</button>
+              <button class="btn btn-secondary m-1"(click)="idioma='FR'">FRANCES</button>
+              <button class="btn btn-success m-1"(click)="idioma='EN'">INGLES</button>
+              <button class="btn btn-success m-1"(click)="idioma='DE'">ALEMAN</button>
+            </td>
+            <th>{{fecha | date:'MMMM-dd':'':idioma}}</th>
+          </tr>
         </tbody>
       </table>
       <h4>slice</h4>
       <ul>
         <li *ngFor="let item of array | slice:5:20">{{item}}</li>
       </ul>
+      <h3>JSON</h3>
+      <hr>
+      <div class="row mb-5">
+          <div class="col">
+            <pre>
+            {{heroe | json}}
+          </pre>
+          </div>
+      </div>
   </div>
 </div>
