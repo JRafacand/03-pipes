@@ -21,6 +21,12 @@
             <th> lowercase </th>
             <th>{{nombre | lowercase}}</th>
           </tr>
+          <!--Pipe personalizado-->
+          <tr>
+            <th>{{nombre2}}</th>
+            <th> pipersonalizado</th>
+            <th>{{nombre2 | pipersonalizado:true}}</th>
+          </tr>
            <!--slice permite cortar, se le dice desde que posicion empieza a cortar, en su defecto corta las primeras posiciones y muestra lo que viene despues-->
             <tr>
             <th>{{nombre}}</th>
@@ -109,7 +115,17 @@
             </td>
             <th>{{fecha | date:'MMMM-dd':'':idioma}}</th>
           </tr>
-        </tbody>
+          <tr>
+            <td>{{nombre3}}</td>
+            <td> contraseña:{{activar}}
+              <br>
+              <button class="btn btn-primary" (click)="activar=!activar">
+              Activar/desactivar
+              </button>
+            </td>
+            <td>{{nombre3 | asteris:activar}}</td>
+          </tr>
+          </tbody>
       </table>
       <h4>slice</h4>
       <ul>
@@ -125,4 +141,19 @@
           </div>
       </div>
   </div>
+</div>
+<h3 class="mt-4">Domseguro</h3>
+<hr>
+<div class="row mb-5">
+    <div class="col">
+      <iframe width="560" 
+              height="315" 
+              [src]="videourl | domseguro"
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
 </div>

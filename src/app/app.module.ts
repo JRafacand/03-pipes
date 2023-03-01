@@ -5,13 +5,19 @@ import  localeEs from '@angular/common/locales/es';
 import  localeFr from '@angular/common/locales/fr';
 import  localeGr from '@angular/common/locales/de';
 import { AppComponent } from './app.component';
+import { PipersonalizadoPipe } from './pipes/pipersonalizado.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { AsterisPipe } from './pipes/asteris.pipe';
 
 registerLocaleData(localeEs);
 registerLocaleData(localeFr);
 registerLocaleData(localeGr);
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PipersonalizadoPipe,
+    DomseguroPipe,
+    AsterisPipe
   ],
   imports: [
     BrowserModule
